@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// A widget made to show detailed information about a character.
 class PersonalInfo extends StatelessWidget {
   const PersonalInfo({
     super.key,

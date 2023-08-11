@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:rick_and_morty_demo/components/custom_navigation_bar.dart';
 import 'package:rick_and_morty_demo/providers/navigation_provider.dart';
 
+/// The base Scaffold of the application, customized to fit the style.
 class CustomScaffold extends StatefulWidget {
   const CustomScaffold({super.key});
 

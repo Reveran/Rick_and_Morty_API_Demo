@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// A widget similar to the *PersonalInfo* widget, displays information of an object.
 class OtherInfo extends StatelessWidget {
   const OtherInfo({
     super.key,

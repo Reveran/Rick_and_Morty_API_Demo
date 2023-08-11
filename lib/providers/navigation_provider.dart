@@ -10,6 +10,9 @@ import 'package:rick_and_morty_demo/views/locations_view.dart';
 
 import '../views/detailed_episode_view.dart';
 
+/// Using Flutter's route and navigation system, the bottom navigation bar
+/// doesn't stay in place, causing unwanted jitering when navigating.
+/// This is a simpple custom navigation system to fix that problem.
 class NavigationProvider with ChangeNotifier {
   int _currentRoute = 0;
   List<AppRoute> _routeStack = [AppRoute.home];
@@ -18,6 +21,8 @@ class NavigationProvider with ChangeNotifier {
   Widget get currentPage => _currentPage;
   int get currentRoute => _currentRoute;
 
+  /// receives a route from the AppRoute enum and args, returns the matching route
+  /// and applies the args to the route.
   void gotoRoute(AppRoute route, {String args = '', bool isPoping = false}) {
     if (!isPoping && route == _routeStack.last) {
       return;
@@ -73,6 +78,7 @@ class NavigationProvider with ChangeNotifier {
     notifyListeners();
   }
 
+  /// returns to the previous route.
   void pop() {
     if (_routeStack.last == AppRoute.home) {
       return;

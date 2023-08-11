@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:graphql/client.dart';
 import 'package:rick_and_morty_demo/utils/config_loader.dart';
 
+/// Singletone holding a GraphQL client.
 class ApiClient {
   ApiClient._() {
     setup();

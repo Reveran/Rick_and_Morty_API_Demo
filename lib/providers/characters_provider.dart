@@ -6,6 +6,7 @@ import 'collection_provider.dart';
 import '../models/character.dart';
 import '../utils/api_client.dart';
 
+/// A service like provider to fetch information about the Characters
 class CharactersProvider with ChangeNotifier implements CollectionProvider {
   final ApiClient _gqlClient = ApiClient.instance();
   bool _isLoading = true;
@@ -23,6 +24,8 @@ class CharactersProvider with ChangeNotifier implements CollectionProvider {
   List<Character> _characterList = [];
 
   List<Character> get characterList => _characterList;
+
+  /// Pagination Getters
   @override
   int get currentPage => _currentPage;
   @override
@@ -32,6 +35,7 @@ class CharactersProvider with ChangeNotifier implements CollectionProvider {
   @override
   int? get prevPage => _prevPage;
 
+  /// Flag Variables
   bool get isLoading => _isLoading;
 
   Errors? get exeption => _exeption;

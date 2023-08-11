@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:rick_and_morty_demo/providers/navigation_provider.dart';
 import 'package:rick_and_morty_demo/utils/app_routes_enum.dart';
 
+/// A custom widget looking like a personal record
 class CharacterCard extends StatelessWidget {
   const CharacterCard(
       {super.key,

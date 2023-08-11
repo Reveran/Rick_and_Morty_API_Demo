@@ -6,6 +6,7 @@ import '../utils/errors_enum.dart';
 import '../models/location.dart';
 import '../utils/api_client.dart';
 
+/// A service like provider to fetch information about the locations
 class LocationsProvider extends CollectionProvider with ChangeNotifier {
   final ApiClient _gqlClient = ApiClient.instance();
   bool _isLoading = true;
@@ -23,6 +24,8 @@ class LocationsProvider extends CollectionProvider with ChangeNotifier {
   List<Location> _locationList = [];
 
   List<Location> get locationList => _locationList;
+
+  /// Pagination Getters
   @override
   int get currentPage => _currentPage;
   @override
@@ -32,6 +35,7 @@ class LocationsProvider extends CollectionProvider with ChangeNotifier {
   @override
   int? get prevPage => _prevPage;
 
+  /// Flag Variables
   bool get isLoading => _isLoading;
 
   Errors? get exeption => _exeption;

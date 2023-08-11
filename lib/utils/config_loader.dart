@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:yaml/yaml.dart';
 
+/// Singletone holding the app configuration.
 class ConfigLoader {
   ConfigLoader._() {
     load();
