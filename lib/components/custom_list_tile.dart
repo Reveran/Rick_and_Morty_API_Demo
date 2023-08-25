@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// A widget used to display brief information of an object.
 class CustomListTile extends StatelessWidget {
   const CustomListTile({
     super.key,

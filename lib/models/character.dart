@@ -32,6 +32,7 @@ class Character {
       'name': 'Unknown Location',
     };
 
+    /// Asignation and fallbak data
     id = json['id'] ?? '';
     name = json['name'] ?? 'Unknown';
     status = json['status'] ?? 'Unknown';

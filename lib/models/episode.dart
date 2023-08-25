@@ -10,6 +10,7 @@ class Episode {
   Episode(this.id, this.name, this.airDate, this.episode, this.characters);
 
   Episode.fromJson(Map<String, dynamic> json) {
+    /// Asignation and fallbak data
     id = json['id'] ?? '';
     name = json['name'];
     airDate = json['air_date'] ?? 'Unknown';

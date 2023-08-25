@@ -10,6 +10,7 @@ class Location {
   Location(this.id, this.name, this.type, this.dimension, this.residents);
 
   Location.fromJson(Map<String, dynamic> json) {
+    /// Asignation and fallbak data
     id = json['id'] ?? '';
     name = json['name'];
     type = json['type'] ?? 'Unknown';

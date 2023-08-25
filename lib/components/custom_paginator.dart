@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../providers/collection_provider.dart';
 
+/// A Stylized Paginator that consumes a CollectionProvider.
 class CustomPaginator extends StatefulWidget {
   const CustomPaginator({
     super.key,
@@ -79,6 +80,7 @@ class _CustomPaginatorState extends State<CustomPaginator> {
     );
   }
 
+  /// A fuction to generate the list of page numbers displayed in the paginator.
   List<int> genPages(int numPages, int maxPages, int currentPage) {
     List<int> pages = [];
 
@@ -102,6 +104,7 @@ class _CustomPaginatorState extends State<CustomPaginator> {
     return pages;
   }
 
+  /// A function to generate the page number widgets.
   List<Widget> genButtons(CollectionProvider provider, ThemeData theme) {
     List<int> pages = genPages(2, provider.maxPages, provider.currentPage);
     return pages.map((

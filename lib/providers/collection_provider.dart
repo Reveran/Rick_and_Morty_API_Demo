@@ -1,9 +1,11 @@
+/// the base class of a data quering service.
 abstract class CollectionProvider {
   int _currentPage = 1;
   final int _maxPages = 1;
   int? _nextPage;
   int? _prevPage;
 
+  /// Pagination Getters
   int get currentPage => _currentPage;
   int get maxPages => _maxPages;
   int? get nextPage => _nextPage;

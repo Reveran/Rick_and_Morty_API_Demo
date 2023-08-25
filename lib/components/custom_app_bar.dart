@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rick_and_morty_demo/providers/collection_provider.dart';
 
+/// The application bar used in the app, contains a back button and a search bar.
 class CustomAppBar extends StatefulWidget {
   CustomAppBar({super.key, required this.provider});
 

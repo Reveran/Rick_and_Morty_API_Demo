@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:rick_and_morty_demo/providers/navigation_provider.dart';
 import 'package:rick_and_morty_demo/utils/app_routes_enum.dart';
 
+/// A customized Gnav bar to fit the app style.
 class CustomNavigationBar extends StatefulWidget {
   const CustomNavigationBar({
     super.key,

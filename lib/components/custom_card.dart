@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// A card styled widget to show minimal information
 class CustomCard extends StatelessWidget {
   const CustomCard({
     super.key,

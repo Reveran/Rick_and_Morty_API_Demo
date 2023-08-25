@@ -6,6 +6,7 @@ import 'collection_provider.dart';
 import '../models/episode.dart';
 import '../utils/api_client.dart';
 
+/// A service like provider to fetch information about the Episodes
 class EpisodesProvider extends CollectionProvider with ChangeNotifier {
   final ApiClient _gqlClient = ApiClient.instance();
   bool _isLoading = true;
@@ -23,6 +24,8 @@ class EpisodesProvider extends CollectionProvider with ChangeNotifier {
   String _searchTerm = '';
 
   List<Episode> get episodeList => _episodeList;
+
+  /// Pagination Getters
   @override
   int get currentPage => _currentPage;
   @override
@@ -32,6 +35,7 @@ class EpisodesProvider extends CollectionProvider with ChangeNotifier {
   @override
   int? get prevPage => _prevPage;
 
+  /// Flag Variables
   bool get isLoading => _isLoading;
 
   Errors? get exeption => _exeption;
